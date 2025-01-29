@@ -12,6 +12,8 @@ body {
   width: 100%;
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
+  cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur862.ani), url(http://cur.cursors-4u.net/cursors/cur-9/cur862.png), progress !important;
+	a:hover cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur862.ani), url(http://cur.cursors-4u.net/cursors/cur-9/cur862.png), progress !important;
 }
 body::-webkit-scrollbar {
   display: none;
