@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+body {
+  background: #f2f3fb;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur862.ani), url(http://cur.cursors-4u.net/cursors/cur-9/cur862.png), progress !important;
+	a:hover cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur862.ani), url(http://cur.cursors-4u.net/cursors/cur-9/cur862.png), progress !important;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/**************animation************ */
+
+
+.container {
+  background-color: black;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.loading-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #000000, #000000, #000000);
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  color: #191654;
+}
+
+#svg {
+  height: 150px;
+  width: 150px;
+  stroke: white;
+  fill-opacity: 0;
+  stroke-width: 3px;
+  stroke-dasharray: 4500;
+  animation: draw 8s ease;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.name-container {
+  height: 30px;
+  overflow: hidden;
+}
+
+.logo-name {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-weight: bolder;
+}
+/**************links css************ */
+a {
+  color: #343b45;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
+/***linkswrapper maintain page content width***/
+.linkswrapper {
+  padding: 1.5rem 0;
+  margin: auto;
+  width: 85%;
+}
+.linkscontainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/*****Picture and name*****/
+.picture {
+  height: 9rem;
+  width: 9rem;
+  background-color: #52c8ff;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.picture img {
+  height: 9rem;
+  width: 9rem;
+}
+.name {
+  padding: 1rem 0;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  color: #00445a;
+}
+
+/**On load name effect**/
+.name>span {
+  display: inline-block;
+  overflow: hidden;
+  transition: .2s transform
+}
+
+.name>span span {
+  display: inline-block;
+  transition: .5s transform cubic-bezier(.34, 1.56, .64, 1);
+}
+.name>span:nth-child(odd) {
+  transform: translateY(50%);
+}
+.name>span:nth-child(odd) span {
+  transform: translateY(-100%);
+}
+.name>span:nth-child(even) {
+  transform: translateY(-50%);
+}
+.name>span:nth-child(even) span {
+  transform: translateY(100%);
+}
+
+.name.loaded>span,
+.name.loaded>span span {
+  transform: translateY(0);
+}
+
+/*****Few personal details*****/
+.info-box {
+  width: 100%;
+  background-color: #f5f5fc;
+  border-radius: 0.5rem;
+  border: 2px solid #343b45;
+  padding: 1rem 0;
+  height: 3.45rem;
+  overflow: hidden;
+  position: relative;
+}
+#aboutme{
+  margin-bottom: 20px; 
+}
+
+/*if toggle btn click then add .active*/
+.info-box .toggle {
+  padding: 0.94rem;
+  width: 100%;
+  height: 3.36rem;
+  cursor: pointer;
+  position: absolute;
+  font-size: 1.3rem;
+  top: 0;
+  right: 0;
+}
+.info-box.active {
+  height: auto;
+  padding-bottom: 0;
+  overflow: visible;
+}
+/***toggle button rotate on click***/
+.info-box .toggle i {
+  float: right;
+  transition: 0.25s;
+}
+.info-box.active .toggle > i {
+  transition: 0.25s;
+  transform: rotate(-180deg);
+}
+
+/***details***/
+.details {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: 95%;
+  margin: auto;
+}
+.details ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  text-align: left;
+}
+.details ul li {
+  color: #4b4c4f;
+  padding: 0.5rem;
+}
+.details b {
+  color: #00445a;
+  letter-spacing: 1.3px;
+}
+.details .about {
+  line-height: 1.5rem;
+}
+
+/***Project section***/
+.projects {
+  width: 100%;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  border-bottom: 1.5px solid #0000001a;
+  padding: 0;
+  text-decoration: none;
+}
+
+.project i {
+  font-size: 2rem;
+  color: #26caff;
+}
+
+.project ul {
+  overflow: hidden;
+  list-style-type: none;
+  line-height: 0.2rem;
+  margin-left: 0.8rem;
+}
+
+.project ul li {
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000;
+}
+
+.project ul small {
+  color: #909090;
+}
+
+/*****All social media btn*****/
+.social-media {
+  width: 100%;
+}
+
+.social-media div {
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  backdrop-filter: blur(10px);
+  border: 2px solid #343b45;
+  background-color: #f5f5fc;
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.social-media div:hover {
+  color: #ffffff;
+  background-color: #343b45;
+}
+
+/***responsive for desktop***/
+@media only screen and (min-width: 1000px) {
+  .linkswrapper {
+    width: 55%;
+  }
+}
+
+
+
+
+/* for annonymus message */
+
+/* .info-msg-box {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+} */
+
+.chat ul {
+  list-style: none;
+  padding: 0;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea-container {
+  position: relative;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+textarea:focus {
+  border-color: #007bff;
+}
+
+.send-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #007bff;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  color: #0056b3;
+}
