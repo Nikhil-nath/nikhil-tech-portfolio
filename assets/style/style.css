@@ -165,6 +165,10 @@ ul {
   overflow: hidden;
   position: relative;
 }
+#aboutme{
+  margin-bottom: 20px; 
+}
+
 /*if toggle btn click then add .active*/
 .info-box .toggle {
   padding: 0.94rem;
@@ -281,4 +285,63 @@ ul {
   .linkswrapper {
     width: 55%;
   }
+}
+
+
+
+
+/* for annonymus message */
+
+/* .info-msg-box {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+} */
+
+.chat ul {
+  list-style: none;
+  padding: 0;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea-container {
+  position: relative;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+textarea:focus {
+  border-color: #007bff;
+}
+
+.send-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #007bff;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  color: #0056b3;
 }

@@ -1,16 +1,18 @@
+
 /*more details button*/
-const container = document.querySelector(".info-box");
-
-const toggle = document.querySelector(".toggle");
-toggle.addEventListener("click", () => {
-  container.classList.toggle("active");
+const toggles = document.querySelectorAll(".toggle");
+toggles.forEach((toggle) => {
+    const container = toggle.closest(".info-box"); //find closest parent div
+    if (container){
+      toggle.addEventListener("click", () => {
+        container.classList.toggle("active");
+      });
+    }
 });
-
 /*vibration*/
 function vibrate() {
   navigator.vibrate(6);
 }
-
 // Zoom in up effect add in every social media button one by one
 const socialMediaLinks = document.querySelectorAll(".social-media div");
 
@@ -52,3 +54,23 @@ gsap.fromTo(
     delay: 0.5,
   }
 );
+
+
+// In your assets/js/script.js file (or in a <script> tag in your HTML if you prefer)
+
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('.message-form');
+  if (form) {
+    form.addEventListener('submit', function(event) {
+      // Web3Forms is handling the submission, so no need for event.preventDefault()
+
+      const textarea = document.getElementById('message');
+      if (textarea) {
+        // Delay clearing the textarea using setTimeout
+        setTimeout(() => {
+          textarea.value = ''; // Clear the textarea after a short delay
+        }, 1000); // Adjust the delay (in milliseconds) as needed. 500ms (0.5 seconds) is usually sufficient.
+      }
+    });
+  }
+});

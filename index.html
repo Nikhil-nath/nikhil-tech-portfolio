@@ -45,50 +45,86 @@
           </div>
           <!--On loading name effect-->
           <div class="name" translate="no">
-           <span><span>Nik</span></span><span><span>hil</span></span> <span><span>Kum</span></span><span><span>ar</span></span><span><span>nath</span></span>
+           <span><span>Nik</span></span><span><span>hil</span></span> <span><span>Kum</span></span><span><span>ar</span></span> <span><span>Nath</span></span>
           </div>
   
           <!----Few personal detail---->
           <!--more details button-->
+
+                    <!--more details button-->
+                    <div class="info-box" id="aboutme">
+                        About me
+                        <div class="toggle" onclick="vibrate()">
+                          <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <!--details-->
+                        <div>
+                          <br />
+                          <div class="details">
+                            <ul>
+                              <li class="about">
+                                Hello, I’m Nikhil Kumar Nath, a BCA student passionate about web development, cybersecurity, and innovative tech solutions. I’m eager to learn, grow, and take on new challenges in the tech field. If you’re looking for someone with a unique perspective and a commitment to growth, let’s connect and build the future together!
+              
+                                Beyond my professional aspirations, I enjoy exploring creative hobbies like DIY projects and watching movies. These activities keep me inspired and bring balance to my life, fueling my drive to innovate and excel.
+                                
+                                <br /><br />
+                                Please don't hesitate to connect with me on every major social
+                                media platform.
+                              </li>
+                             <!-- <li>
+                                <b>Projects:</b>
+                                <div class="projects">
+                                  <a
+                                    href="#"
+                                    class="project"
+                                  >
+                                    <i class="fa-solid fa-file"></i>
+                                    <ul>
+                                      <li>Koo-socialmedia for Education</li>
+                                      <li><small>final year project</small></li>
+                                      <li><small>Created 01.09.2024</small></li>
+                                    </ul>
+                                  </a>
+                                </div>
+                              </li>     -->
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+            
+
+          <!-- annonymous message -->
+
+
           <div class="info-box">
-            About me
+            Leave a Annonymous Message
             <div class="toggle" onclick="vibrate()">
-              <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down"></i>
             </div>
-            <!--details-->
+            <!-- Details -->
             <div>
-              <br />
-              <div class="details">
-                <ul>
-                  <li class="about">
-                    Hello, I’m Nikhil Kumar Nath, a BCA student passionate about web development, cybersecurity, and innovative tech solutions. I’m eager to learn, grow, and take on new challenges in the tech field. If you’re looking for someone with a unique perspective and a commitment to growth, let’s connect and build the future together!
-  
-                    Beyond my professional aspirations, I enjoy exploring creative hobbies like DIY projects and watching movies. These activities keep me inspired and bring balance to my life, fueling my drive to innovate and excel.
-                    
-                    <br /><br />
-                    Please don't hesitate to connect with me on every major social
-                    media platform.
-                  </li>
-                 <!-- <li>
-                    <b>Projects:</b>
-                    <div class="projects">
-                      <a
-                        href="#"
-                        class="project"
-                      >
-                        <i class="fa-solid fa-file"></i>
-                        <ul>
-                          <li>Koo-socialmedia for Education</li>
-                          <li><small>final year project</small></li>
-                          <li><small>Created 01.09.2024</small></li>
-                        </ul>
-                      </a>
-                    </div>
-                  </li>     -->
-                </ul>
-              </div>
+                <br />
+                <div class="details">
+                    <ul>
+                        <li class="about">
+                            <form action="https://api.web3forms.com/submit" method="POST"class="message-form">
+                              <input type="hidden" name="apikey" value="d0771903-8971-479f-affa-684b276c9dac">
+                                <div class="textarea-container">
+                                    <textarea id="message" name="The Annonymous Message is :" placeholder="Write your message..." required></textarea>
+                                    <button type="submit" class="send-btn">
+                                      <input type="hidden" name="redirect" value="https://nixil.me">
+                                        <i class="fa-solid fa-circle-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
+        </div>
+        
+
+
           <!----All social media buttons---->
           <div class="social-media">
             <a href="mailto:contact@nixil.me">
